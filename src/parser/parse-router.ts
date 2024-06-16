@@ -49,11 +49,10 @@ parseRouter.get('/ads', async (req, res) => {
 
 parseRouter.post('/create', async (req, res) => {
     try {
-        const { pages } = req.body;
+        // const { pages } = req.body;
+        const pages = 10
         const cards = await fetchData(pages);
         const createdAds: IAds[] = [];
-
-        console.log('cards:', cards);
 
         for (const card of cards) {
             const existingAd = await adsService.findAdByCardId(card.cardId);
