@@ -47,7 +47,7 @@ parseRouter.get('/ads', async (req, res) => {
 
 
 
-parseRouter.post('/create', async (req, res) => {
+parseRouter.get('/create', async (req, res) => {
     try {
         // const { pages } = req.body;
         const pages = 10
